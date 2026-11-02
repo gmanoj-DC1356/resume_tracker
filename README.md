@@ -14,13 +14,13 @@ Health check: `GET /api/v1/health/`
 ## Who owns which app (Phase 1)
 | App | URL prefix | Owner | Module |
 |---|---|---|---|
-| `accounts` | `/api/v1/auth/` | Srikanth | JWT auth & user management |
-| `screening` | `/api/v1/screening/` | Veeran | JD input, results, session history |
-| `matching` | `/api/v1/matching/` | Vinay | Matching engine & knowledge base |
-| `vectorsearch` | `/api/v1/vectorsearch/` | Abhyuday | Milvus vector search |
-| `resumes` | `/api/v1/resumes/` | Manoj | Resume file serving for the viewer |
-| `interview` | `/api/v1/interview/` | Phase 2 | Questions, chatbot, feedback |
-| `common` | `/api/v1/health/` | Shared | Error handler, shared utilities |
+| `accounts` | `/api/v1/auth/` | Srikanth |
+| `screening` | `/api/v1/screening/` | Veeran |
+| `matching` | `/api/v1/matching/` | Vinay |
+| `vectorsearch` | `/api/v1/vectorsearch/` | Abhyuday |
+| `resumes` | `/api/v1/resumes/` | Manoj |
+| `interview` | `/api/v1/interview/` | Phase 2 |
+| `common` | `/api/v1/health/` | Shared (Error handler, shared utilities) |
 
 Stay inside your own app. If you need something from another app, agree the interface (function or endpoint) with its owner in the PR.
 
