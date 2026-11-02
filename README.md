@@ -2,12 +2,10 @@
 
 ## Quick start
 ```bash
-python3.13 -m venv .venv && source .venv/bin/activate
+python3.13 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-cp .env.example .env            # then fill DJANGO_SECRET_KEY with your own generated value
-set -a; source .env; set +a
+python scripts/init_dev_env.py   # creates your own local .env (secret key + debug); never commit it
 python manage.py migrate
-python manage.py createsuperuser   # local dev only
 python manage.py runserver
 python manage.py test
 ```
