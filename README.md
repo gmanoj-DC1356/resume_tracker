@@ -25,10 +25,9 @@ Health check: `GET /api/v1/health/`
 Stay inside your own app. If you need something from another app, agree the interface (function or endpoint) with its owner in the PR.
 
 ## Conventions (every PR)
-- Apps live at the project root next to `config/` (no `apps/` folder).
+- Apps live at the project root next to `config/`.
 - Pattern: model -> serializer -> view -> permission -> url -> test. Copy `ping` in your app to start.
 - Every endpoint is authenticated by default. Opt out only with an explicit `AllowAny` and a comment saying why.
-- Authorize by object (e.g. "can this user see *this* resume"), not just "is logged in".
 - Validate all input in serializers (allowlist type/shape/range). No raw SQL string building; use the ORM.
 - No secrets, real resumes or candidate data in code, tests or fixtures. Use synthetic data.
 - No new dependency without approval (see below).
