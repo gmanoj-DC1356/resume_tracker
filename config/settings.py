@@ -143,7 +143,7 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 20,
     "DEFAULT_THROTTLE_CLASSES": ["rest_framework.throttling.UserRateThrottle"],
     "DEFAULT_THROTTLE_RATES": {"user": "1000/day"},
-    "EXCEPTION_HANDLER": "apps.common.exceptions.api_exception_handler",
+    "EXCEPTION_HANDLER": "common.exceptions.api_exception_handler",
 }
 
 # --- Security headers / cookies (tightened further when DEBUG is false) -------

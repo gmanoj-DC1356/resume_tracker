@@ -16,17 +16,18 @@ Health check: `GET /api/v1/health/`
 ## Who owns which app (Phase 1)
 | App | URL prefix | Owner | Module |
 |---|---|---|---|
-| `apps/accounts` | `/api/v1/auth/` | Srikanth | JWT auth & user management |
-| `apps/screening` | `/api/v1/screening/` | Veeran | JD input, results, session history |
-| `apps/matching` | `/api/v1/matching/` | Vinay | Matching engine & knowledge base |
-| `apps/vectorsearch` | `/api/v1/vectorsearch/` | Abhyuday | Milvus vector search |
-| `apps/resumes` | `/api/v1/resumes/` | Manoj | Resume file serving for the viewer |
-| `apps/interview` | `/api/v1/interview/` | Phase 2 | Questions, chatbot, feedback |
-| `apps/common` | `/api/v1/health/` | Shared | Error handler, shared utilities |
+| `accounts` | `/api/v1/auth/` | Srikanth | JWT auth & user management |
+| `screening` | `/api/v1/screening/` | Veeran | JD input, results, session history |
+| `matching` | `/api/v1/matching/` | Vinay | Matching engine & knowledge base |
+| `vectorsearch` | `/api/v1/vectorsearch/` | Abhyuday | Milvus vector search |
+| `resumes` | `/api/v1/resumes/` | Manoj | Resume file serving for the viewer |
+| `interview` | `/api/v1/interview/` | Phase 2 | Questions, chatbot, feedback |
+| `common` | `/api/v1/health/` | Shared | Error handler, shared utilities |
 
 Stay inside your own app. If you need something from another app, agree the interface (function or endpoint) with its owner in the PR.
 
 ## Conventions (every PR)
+- Apps live at the project root next to `config/` (no `apps/` folder).
 - Pattern: model -> serializer -> view -> permission -> url -> test. Copy `ping` in your app to start.
 - Every endpoint is authenticated by default. Opt out only with an explicit `AllowAny` and a comment saying why.
 - Authorize by object (e.g. "can this user see *this* resume"), not just "is logged in".
