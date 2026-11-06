@@ -48,6 +48,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    # Project apps - one per module owner (see README)
+    "common",
+    "accounts",
+    "screening",
+    "matching",
+    "vectorsearch",
+    "resumes",
+    "interview",
 ]
 
 MIDDLEWARE = [
@@ -164,3 +173,14 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = 31536000
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
+
+# --- Resume files (resumes app) ----------------------------------------------
+# Files are written through Django's storage API only, so moving to S3 later is a settings
+# change. MEDIA_ROOT is never served directly; files are streamed by an authorised API view.
+# Keep RESUME_STORAGE_ROOT outside OneDrive-synced folders.
+MEDIA_ROOT = Path(os.environ.get("RESUME_STORAGE_ROOT", BASE_DIR / "media"))
+RESUME_MAX_UPLOAD_BYTES = 5 * 1024 * 1024
+RESUME_MAX_UNCOMPRESSED_BYTES = 50 * 1024 * 1024  # zip-bomb guard for .docx
+# Path to the LibreOffice binary used to convert Word files to PDF.
+LIBREOFFICE_BIN = os.environ.get("LIBREOFFICE_BIN", "soffice")
+RESUME_CONVERSION_TIMEOUT_SECONDS = 60

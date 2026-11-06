@@ -1,0 +1,101 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 3406 >>
+stream
+BT /F2 20 Tf 56 790 Td (Candidate E) Tj ET
+BT /F1 11 Tf 56 764 Td (Principal Data Engineer | 12 years experience) Tj ET
+BT /F1 10.5 Tf 56 748 Td () Tj ET
+BT /F2 12 Tf 56 732 Td (SUMMARY) Tj ET
+BT /F1 10.5 Tf 56 716 Td (Built Spark batch and streaming pipelines on Azure Databricks for commercial analytics.) Tj ET
+BT /F1 10.5 Tf 56 700 Td (Comfortable owning pipelines from design to production support.) Tj ET
+BT /F1 10.5 Tf 56 684 Td () Tj ET
+BT /F2 12 Tf 56 668 Td (SKILLS) Tj ET
+BT /F1 10.5 Tf 56 652 Td (Python | SQL | Spark | Azure | Airflow | Delta Lake) Tj ET
+BT /F1 10.5 Tf 56 636 Td () Tj ET
+BT /F2 12 Tf 56 620 Td (EXPERIENCE) Tj ET
+BT /F2 10.5 Tf 56 604 Td (Lead Data Engineer - Example Analytics Ltd \(2021-present\)) Tj ET
+BT /F1 10.5 Tf 70 588 Td (- Designed idempotent batch pipelines processing 2 TB daily on Spark.) Tj ET
+BT /F1 10.5 Tf 70 572 Td (- Led a team of four engineers; introduced code review and data-quality checks.) Tj ET
+BT /F1 10.5 Tf 70 556 Td (- Cut pipeline run time by 40 percent through partition tuning and caching.) Tj ET
+BT /F1 10.5 Tf 56 540 Td () Tj ET
+BT /F2 10.5 Tf 56 524 Td (Data Engineer - Sample Insights Inc \(2018-2021\)) Tj ET
+BT /F1 10.5 Tf 70 508 Td (- Built SQL transformation layers and scheduled jobs in Airflow.) Tj ET
+BT /F1 10.5 Tf 70 492 Td (- Migrated legacy ETL scripts to Python with automated tests.) Tj ET
+BT /F1 10.5 Tf 56 476 Td () Tj ET
+BT /F2 10.5 Tf 56 460 Td (Junior Developer - Demo Software Co \(2016-2018\)) Tj ET
+BT /F1 10.5 Tf 70 444 Td (- Maintained reporting scripts and supported production data loads.) Tj ET
+BT /F1 10.5 Tf 56 428 Td () Tj ET
+BT /F2 10.5 Tf 56 412 Td (Lead Data Engineer - Example Analytics Ltd \(2021-present\)) Tj ET
+BT /F1 10.5 Tf 70 396 Td (- Designed idempotent batch pipelines processing 2 TB daily on Spark.) Tj ET
+BT /F1 10.5 Tf 70 380 Td (- Led a team of four engineers; introduced code review and data-quality checks.) Tj ET
+BT /F1 10.5 Tf 70 364 Td (- Cut pipeline run time by 40 percent through partition tuning and caching.) Tj ET
+BT /F1 10.5 Tf 56 348 Td () Tj ET
+BT /F2 10.5 Tf 56 332 Td (Data Engineer - Sample Insights Inc \(2018-2021\)) Tj ET
+BT /F1 10.5 Tf 70 316 Td (- Built SQL transformation layers and scheduled jobs in Airflow.) Tj ET
+BT /F1 10.5 Tf 70 300 Td (- Migrated legacy ETL scripts to Python with automated tests.) Tj ET
+BT /F1 10.5 Tf 56 284 Td () Tj ET
+BT /F2 10.5 Tf 56 268 Td (Junior Developer - Demo Software Co \(2016-2018\)) Tj ET
+BT /F1 10.5 Tf 70 252 Td (- Maintained reporting scripts and supported production data loads.) Tj ET
+BT /F1 10.5 Tf 56 236 Td () Tj ET
+BT /F2 10.5 Tf 56 220 Td (Lead Data Engineer - Example Analytics Ltd \(2021-present\)) Tj ET
+BT /F1 10.5 Tf 70 204 Td (- Designed idempotent batch pipelines processing 2 TB daily on Spark.) Tj ET
+BT /F1 10.5 Tf 70 188 Td (- Led a team of four engineers; introduced code review and data-quality checks.) Tj ET
+BT /F1 10.5 Tf 70 172 Td (- Cut pipeline run time by 40 percent through partition tuning and caching.) Tj ET
+BT /F1 10.5 Tf 56 156 Td () Tj ET
+BT /F2 10.5 Tf 56 140 Td (Data Engineer - Sample Insights Inc \(2018-2021\)) Tj ET
+BT /F1 10.5 Tf 70 124 Td (- Built SQL transformation layers and scheduled jobs in Airflow.) Tj ET
+BT /F1 10.5 Tf 70 108 Td (- Migrated legacy ETL scripts to Python with automated tests.) Tj ET
+BT /F1 10.5 Tf 56 92 Td () Tj ET
+BT /F1 8 Tf 280 30 Td (Page 1 of 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 685 >>
+stream
+BT /F2 10.5 Tf 56 790 Td (Junior Developer - Demo Software Co \(2016-2018\)) Tj ET
+BT /F1 10.5 Tf 70 774 Td (- Maintained reporting scripts and supported production data loads.) Tj ET
+BT /F1 10.5 Tf 56 758 Td () Tj ET
+BT /F2 12 Tf 56 742 Td (EDUCATION) Tj ET
+BT /F1 10.5 Tf 56 726 Td (B.Sc. Computer Science, Example University, 2016) Tj ET
+BT /F1 10.5 Tf 56 710 Td () Tj ET
+BT /F2 12 Tf 56 694 Td (CERTIFICATIONS) Tj ET
+BT /F1 10.5 Tf 70 678 Td (- Example Cloud Data Engineer Associate \(sample\)) Tj ET
+BT /F1 10.5 Tf 56 662 Td () Tj ET
+BT /F1 8.5 Tf 56 646 Td (Synthetic sample resume for software testing. All details are fictional.) Tj ET
+BT /F1 8 Tf 280 30 Td (Page 2 of 2) Tj ET
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000402 00000 n 
+0000003860 00000 n 
+0000003996 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+4732
+%%EOF

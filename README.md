@@ -34,6 +34,24 @@ Stay inside your own app. If you need something from another app, agree the inte
 - No new dependency without approval (see below).
 - Branches: `feature/<app>-<short-name>`; PR needs one reviewer from the owning team and one learner reviewer.
 
+## Resumes API (`resumes` app, Manoj)
+All endpoints require login **and** the `view_resume` / `add_resume` permission, which the **Recruiter**
+group gets automatically after `migrate`. Add a user to that group in the Django admin (`/admin/`).
+Everyone in the group can see every resume. A user without the permission gets 403 on list/upload and 404 on a single resume.
+
+| Method and path | Purpose | Responses |
+|---|---|---|
+| `POST /api/v1/resumes/` | Upload (multipart form: `candidate_name`, `file`; `.pdf` or `.docx`, max 5 MB) | 201, 400, 403, 413, 415 |
+| `GET /api/v1/resumes/` | List (paginated) | 200, 403 |
+| `GET /api/v1/resumes/{id}/` | Details | 200, 404 |
+| `GET /api/v1/resumes/{id}/file/` | Stream the PDF (Word files are converted at upload) | 200, 404, 422 |
+
+Files are stored through Django's storage API under `MEDIA_ROOT/resumes/<id>/` (`original.*`, plus `viewable.pdf` for Word).
+`media/` is gitignored. Set `RESUME_STORAGE_ROOT` in `.env` to keep the files outside OneDrive.
+Word conversion needs LibreOffice installed; point `LIBREOFFICE_BIN` at it if it is not on your PATH
+(Windows: `C:\Program Files\LibreOffice\program\soffice.exe`). Without it, PDFs still work and Word uploads are marked `failed`.
+Load the synthetic demo resumes (development only): `python manage.py load_sample_resumes --username <your user>`.
+
 ## Dependencies
 Approved/in manifest: Django, djangorestframework. **Pending approval (not installed):**
 `djangorestframework-simplejwt` (Srikanth, JWT), a PostgreSQL driver `psycopg` (database; dev uses SQLite for now),
