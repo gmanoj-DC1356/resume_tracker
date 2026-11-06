@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "corsheaders",
     # Project apps - one per module owner (see README)
     "common",
     "accounts",
@@ -62,6 +63,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",  # must sit above CommonMiddleware
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -173,6 +175,14 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = 31536000
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
+
+# --- CORS (browser calls from the UI) -----------------------------------------
+# Fail closed: no origin is allowed unless listed in CORS_ALLOWED_ORIGINS (comma separated,
+# full origins such as http://localhost:5173). Never use a wildcard. Credentials (cookies) are
+# only allowed when explicitly switched on, and only for the listed origins.
+CORS_ALLOWED_ORIGINS = [o.strip() for o in os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",") if o.strip()]
+CORS_ALLOW_CREDENTIALS = os.environ.get("CORS_ALLOW_CREDENTIALS", "false").lower() == "true"
+CORS_URLS_REGEX = r"^/api/.*$"
 
 # --- Resume files (resumes app) ----------------------------------------------
 # Files are written through Django's storage API only, so moving to S3 later is a settings

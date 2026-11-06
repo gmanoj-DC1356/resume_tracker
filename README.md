@@ -52,8 +52,18 @@ Word conversion needs LibreOffice installed; point `LIBREOFFICE_BIN` at it if it
 (Windows: `C:\Program Files\LibreOffice\program\soffice.exe`). Without it, PDFs still work and Word uploads are marked `failed`.
 Load the synthetic demo resumes (development only): `python manage.py load_sample_resumes --username <your user>`.
 
+## CORS (UI on a different port)
+No origin is allowed unless listed in `.env` (full origins, comma separated, no wildcard). For local development:
+```
+CORS_ALLOWED_ORIGINS=http://localhost:5173
+CORS_ALLOW_CREDENTIALS=true
+```
+`CORS_ALLOW_CREDENTIALS` is only needed while using the temporary Django session login; it stays off by default.
+Only `/api/` paths get CORS headers. Restart `runserver` after changing `.env`.
+
 ## Dependencies
-Approved/in manifest: Django, djangorestframework. **Pending approval (not installed):**
+Approved/in manifest: Django, djangorestframework, django-cors-headers (browser calls from the UI).
+**Pending approval (not installed):**
 `djangorestframework-simplejwt` (Srikanth, JWT), a PostgreSQL driver `psycopg` (database; dev uses SQLite for now),
 `celery` + `redis`, `pymongo`, `boto3`, `pymilvus`. Raise these via the approval process before use.
 
